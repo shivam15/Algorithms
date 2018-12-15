@@ -32,12 +32,12 @@ public class AVL {
         AVL tree = new AVL();
 
         /* Constructing tree given in the above figure */
-        tree.root = tree.insert(tree.root, 10); 
-        tree.root = tree.insert(tree.root, 20); 
-        tree.root = tree.insert(tree.root, 30); 
-        tree.root = tree.insert(tree.root, 40); 
-        tree.root = tree.insert(tree.root, 50); 
-        tree.root = tree.insert(tree.root, 25); 
+        tree.root = tree.insert(tree.root, 10);
+        tree.root = tree.insert(tree.root, 20);
+        tree.root = tree.insert(tree.root, 30);
+        tree.root = tree.insert(tree.root, 40);
+        tree.root = tree.insert(tree.root, 50);
+        tree.root = tree.insert(tree.root, 25);
 
         /* The constructed AVL Tree would be 
              30 
@@ -108,19 +108,19 @@ public class AVL {
     }
 
     static Node rightRotate(Node y) {
-        Node x = y.Left; 
-        Node T2 = x.right; 
-  
+        Node x = y.Left;
+        Node T2 = x.right;
+
         // Perform rotation 
-        x.right = y; 
-        y.Left = T2; 
-  
+        x.right = y;
+        y.Left = T2;
+
         // Update heights 
-        y.height = Math.max(height(y.Left), height(y.right)) + 1; 
-        x.height = Math.max(height(x.Left), height(x.right)) + 1; 
-  
+        y.height = Math.max(height(y.Left), height(y.right)) + 1;
+        x.height = Math.max(height(x.Left), height(x.right)) + 1;
+
         // Return new root 
-        return x; 
+        return x;
     }
 
     static Node leftRotate(Node x) {
