@@ -40,7 +40,6 @@ public class FutureApi {
 }
 
 class CallableTest implements Callable {
-
     @Override
     public Object call() throws Exception {
         Random generator = new Random();
@@ -48,5 +47,4 @@ class CallableTest implements Callable {
         Thread.sleep(randomNumber * 1000);
         return randomNumber;
     }
-
 }
